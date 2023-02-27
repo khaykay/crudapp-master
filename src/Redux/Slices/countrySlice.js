@@ -10,7 +10,7 @@ export const fetchCountries = createAsyncThunk(
       return countries;
     } catch (error) {
       console.log(error);
-      return rejectWithValue("error! something went wrong");
+      return rejectWithValue("error! something went wrong ");
     }
   }
 );
@@ -18,6 +18,7 @@ export const fetchCountries = createAsyncThunk(
 const initialState = {
   isLoading: true,
   error: false,
+  favourite: false,
 };
 export const countrySlices = createSlice({
   name: "country",
